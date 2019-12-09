@@ -1,0 +1,28 @@
+QUERY
+*  select first_name, last_name from employees;
+*  select department_id from employees;
+*  select * from employees order by first_name desc;
+*  select first_name, last_name, salary from employees order by salary desc;
+*  select count(*) from employees;
+*  select first_name, last_name, salary from employees where salary NOT BETWEEN 10000 AND 15000;
+*  Select first_name, last_name, department_id from employees where department_id in(30, 100) order by department_id asc;
+*  select first_name, last_name, hire_date from employees where year(hire_date) like 1987;
+*  select last_name, job_id, salary from employees where job_id in ('IT_PROG', 'SH_CLERK') and salary not in(4500, 10000, 15000);
+*  Select last_name from employees where last_name in('BLAKE', 'SCOTT', 'KING', 'FORD');
+*  Select sum(salary) from employees;
+*  Select min(salary) from employees;
+*  Select avg(salary), count(*) from employees where department_id = 90;
+*  Select job_id, count(*) from employees group by job_id;
+*  Select job_id, avg(salary) from employees where job_id <> 'IT_PROG' group by job_id;
+JOINS
+* Select location_id, street_address, city, state_province from locations natural join countries;
+* Select first_name, last_name, department_id, department_name from employees join departments using (department_id);
+* Write a query to find the employee id, name (last_name) along with their manager_id and name (last_name).
+* Select employee_id, job_title, end_date-start_date days from job_history natural join jobs where department_id = 90;
+* Write a query to display the department name, manager name, and city.
+* Write a query to display department name, name (first_name, last_name), hire date, salary of the manager for all managers whose experience is more than 15 years
+
+DATETIME
+* SELECT DATE_SUB('2019-06-15', INTERVAL 3 month);
+* select month('2019-01-01');
+*
